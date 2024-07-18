@@ -61,4 +61,8 @@ public class IJustificationServiceImpl implements IJustificationService {
     public PresenceDTO getPresenceById(Long id) {
         return presenceClient.getPresenceById(id);
     }
+    @Override
+    public List<PresenceDTO> getPresencesByJustificationName(String justificationName) {
+        return presenceClient.getPresencesByJustificationName(justificationName);
+    }
 }

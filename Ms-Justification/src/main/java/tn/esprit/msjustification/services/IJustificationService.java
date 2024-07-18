@@ -13,4 +13,5 @@ public interface IJustificationService {
     JustificationDTO getJustificationById(String id);
     List<JustificationDTO> getAllJustifications();
     PresenceDTO getPresenceById(Long id);
+    List<PresenceDTO> getPresencesByJustificationName(String justificationName);
 }
