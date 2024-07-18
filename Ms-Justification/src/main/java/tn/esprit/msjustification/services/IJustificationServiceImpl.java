@@ -2,8 +2,10 @@ package tn.esprit.msjustification.services;
 
 import org.springframework.stereotype.Service;
 import tn.esprit.msjustification.client.PresenceClient;
-import tn.esprit.msjustification.dto.JustificationDTO;
-import tn.esprit.msjustification.dto.PresenceDTO;
+//import tn.esprit.msjustification.dto.JustificationDTO;
+//import tn.esprit.msjustification.dto.PresenceDTO;
+import tn.esprit.dto.JustificationDTO;
+import tn.esprit.dto.PresenceDTO;
 import tn.esprit.msjustification.entities.Justification;
 import tn.esprit.msjustification.mappers.JustificationMapper;
 import tn.esprit.msjustification.repositories.JustificationRepository;

@@ -1,9 +1,9 @@
 package tn.esprit.msjustification.mappers;
 
 import org.springframework.stereotype.Component;
-import tn.esprit.msjustification.dto.JustificationDTO;
+//import tn.esprit.msjustification.dto.JustificationDTO;
+import tn.esprit.dto.JustificationDTO;
 import tn.esprit.msjustification.entities.Justification;
-
 @Component
 public class JustificationMapper {
     public static JustificationDTO maptoDto(Justification justification) {

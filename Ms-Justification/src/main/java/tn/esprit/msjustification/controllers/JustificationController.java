@@ -2,10 +2,13 @@ package tn.esprit.msjustification.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.msjustification.dto.JustificationDTO;
-import tn.esprit.msjustification.dto.PresenceDTO;
+//import tn.esprit.msjustification.dto.JustificationDTO;
+//import tn.esprit.msjustification.dto.PresenceDTO;
+import tn.esprit.dto.JustificationDTO;
+import tn.esprit.dto.PresenceDTO;
 import tn.esprit.msjustification.services.IJustificationService;
 import java.util.List;
+
 
 
 @RestController
