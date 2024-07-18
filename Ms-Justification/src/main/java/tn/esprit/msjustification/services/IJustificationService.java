@@ -1,6 +1,7 @@
 package tn.esprit.msjustification.services;
 
 import tn.esprit.msjustification.dto.JustificationDTO;
+import tn.esprit.msjustification.dto.PresenceDTO;
 
 import java.util.List;
 
@@ -10,4 +11,5 @@ public interface IJustificationService {
     void deleteJustification(String id);
     JustificationDTO getJustificationById(String id);
     List<JustificationDTO> getAllJustifications();
+    PresenceDTO getPresenceById(Long id);
 }

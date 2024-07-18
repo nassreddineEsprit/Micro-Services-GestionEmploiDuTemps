@@ -6,7 +6,7 @@ import tn.esprit.msjustification.entities.Justification;
 
 @Component
 public class JustificationMapper {
-    public JustificationDTO maptoDto(Justification justification) {
+    public static JustificationDTO maptoDto(Justification justification) {
         if (justification == null) {
             return null;
         }
@@ -23,7 +23,7 @@ public class JustificationMapper {
         return justificationDTO;
     }
 
-    public Justification maptoEntity(JustificationDTO justificationDTO) {
+    public static Justification maptoEntity(JustificationDTO justificationDTO) {
         if (justificationDTO == null) {
             return null;
         }
