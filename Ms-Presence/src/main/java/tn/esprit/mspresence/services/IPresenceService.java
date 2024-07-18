@@ -14,4 +14,4 @@ public interface IPresenceService {
     PresenceDTO getPresenceById(Long id);
     List<PresenceDTO> getAllPresences();
     JustificationDTO getJustificationForPresence(String justificationId);
-}
+    JustificationDTO getJustificationForPresenceRT(String justificationId);}
