@@ -1,9 +1,9 @@
 package tn.esprit.msjustification.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.msjustification.dto.JustificationDTO;
+import tn.esprit.msjustification.dto.PresenceDTO;
 import tn.esprit.msjustification.services.IJustificationService;
 
 import java.util.List;
@@ -12,8 +12,11 @@ import java.util.List;
 @RequestMapping("/api/justifications")
 public class JustificationController {
 
-    @Autowired
-    private IJustificationService justificationService;
+    private final IJustificationService justificationService;
+
+    public JustificationController(IJustificationService justificationService) {
+        this.justificationService = justificationService;
+    }
 
     @PostMapping("/addjustification")
     public ResponseEntity<JustificationDTO> createJustification(@RequestBody JustificationDTO justificationDTO) {
@@ -44,5 +47,11 @@ public class JustificationController {
     public ResponseEntity<List<JustificationDTO>> getAllJustifications() {
         List<JustificationDTO> justifications = justificationService.getAllJustifications();
         return ResponseEntity.ok(justifications);
+    }
+
+    @GetMapping("/getPresence/{id}")
+    public ResponseEntity<PresenceDTO> getPresenceById(@PathVariable Long id) {
+        PresenceDTO presenceDTO = justificationService.getPresenceById(id);
+        return ResponseEntity.ok(presenceDTO);
     }
 }
