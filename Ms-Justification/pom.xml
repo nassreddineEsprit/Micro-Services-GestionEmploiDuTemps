@@ -59,10 +59,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!-- Openfeign Dependency -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+		<!-- SharedLibrary Dependency -->
 		<dependency>
 			<groupId>tn.esprit</groupId>
 			<artifactId>Ms-SharedLibrary</artifactId>

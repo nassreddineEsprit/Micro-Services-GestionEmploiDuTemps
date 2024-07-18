@@ -57,5 +57,10 @@ public class JustificationController {
         PresenceDTO presenceDTO = justificationService.getPresenceById(id);
         return ResponseEntity.ok(presenceDTO);
     }
+    @GetMapping("/presences/byJustificationName/{justificationName}")
+    public ResponseEntity<List<PresenceDTO>> getPresencesByJustificationName(@PathVariable String justificationName) {
+        List<PresenceDTO> presences = justificationService.getPresencesByJustificationName(justificationName);
+        return ResponseEntity.ok(presences);
+    }
 
 }
