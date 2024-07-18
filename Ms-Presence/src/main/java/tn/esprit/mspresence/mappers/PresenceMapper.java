@@ -1,7 +1,8 @@
 package tn.esprit.mspresence.mappers;
 
 import org.springframework.stereotype.Component;
-import tn.esprit.mspresence.dto.PresenceDTO;
+
+import tn.esprit.dto.PresenceDTO;
 import tn.esprit.mspresence.entities.Presence;
 
 @Component
