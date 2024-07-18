@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.msjustification.dto.JustificationDTO;
 import tn.esprit.msjustification.dto.PresenceDTO;
 import tn.esprit.msjustification.services.IJustificationService;
-
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/api/justifications")
@@ -54,4 +54,5 @@ public class JustificationController {
         PresenceDTO presenceDTO = justificationService.getPresenceById(id);
         return ResponseEntity.ok(presenceDTO);
     }
+
 }
