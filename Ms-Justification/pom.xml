@@ -63,6 +63,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+
+		<!-- Ms-SharedLibrary Dependency -->
+		<dependency>
+			<groupId>tn.esprit</groupId>
+			<artifactId>Ms-SharedLibrary</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
