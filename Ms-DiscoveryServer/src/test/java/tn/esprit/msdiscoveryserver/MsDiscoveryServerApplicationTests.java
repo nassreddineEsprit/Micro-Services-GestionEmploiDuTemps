@@ -1,13 +1,13 @@
-package tn.esprit.msedge;
+package tn.esprit.msdiscoveryserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsEdgeApplicationTests {
+class MsDiscoveryServerApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

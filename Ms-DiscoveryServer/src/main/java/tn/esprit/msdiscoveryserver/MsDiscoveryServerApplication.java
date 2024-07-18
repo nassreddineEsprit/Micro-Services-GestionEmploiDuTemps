@@ -1,4 +1,4 @@
-package tn.esprit.msedge;
+package tn.esprit.msdiscoveryserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class MsEdgeApplication {
+public class MsDiscoveryServerApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MsEdgeApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(MsDiscoveryServerApplication.class, args);
+	}
 
 }
