@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 //import tn.esprit.mspresence.dto.JustificationDTO;
 import tn.esprit.dto.JustificationDTO;
 
-@FeignClient(name = "ms-justification",url = "http://localhost:9091")
+//@FeignClient(name = "ms-justification",url = "http://localhost:9091")
+@FeignClient(name = "ms-justification")
 public interface JustificationClient {
     @GetMapping("/api/justifications/getJustification/{justificationId}")
     JustificationDTO getJustificationById(@PathVariable("justificationId") String justificationId);

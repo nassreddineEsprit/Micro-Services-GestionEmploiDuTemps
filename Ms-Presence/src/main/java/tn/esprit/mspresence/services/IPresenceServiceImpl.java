@@ -67,4 +67,22 @@ public class IPresenceServiceImpl implements IPresenceService {
     public JustificationDTO getJustificationForPresenceRT(String justificationId) {
         return justificationClientRestTemplate.getJustificationById(justificationId);
     }
+
+    @Override
+    public PresenceDTO addJustificationToPresence(Long presenceId, String justificationId) {
+        Presence presence = presenceRepository.findById(presenceId).orElseThrow(() -> new RuntimeException("Presence not found"));
+        if (!presence.getEtatPresence()) {
+            JustificationDTO justification = justificationClientRestTemplate.getJustificationById(justificationId);
+            presence.setJustificationName(justification.getJustificationName());
+            presence = presenceRepository.save(presence);
+        }
+        return presenceMapper.mapToDto(presence);
+    }
+    @Override
+    public List<PresenceDTO> getPresencesByJustificationName(String justificationName) {
+        List<Presence> presences = presenceRepository.findByJustificationName(justificationName);
+        return presences.stream()
+                .map(PresenceMapper::mapToDto)
+                .collect(Collectors.toList());
+    }
 }
