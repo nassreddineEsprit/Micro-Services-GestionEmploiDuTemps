@@ -1,8 +1,9 @@
 package tn.esprit.msjustification.services;
 
-import tn.esprit.msjustification.dto.JustificationDTO;
-import tn.esprit.msjustification.dto.PresenceDTO;
-
+//import tn.esprit.msjustification.dto.JustificationDTO;
+//import tn.esprit.msjustification.dto.PresenceDTO;
+import tn.esprit.dto.JustificationDTO;
+import tn.esprit.dto.PresenceDTO;
 import java.util.List;
 
 public interface IJustificationService {
