@@ -7,6 +7,7 @@ import tn.esprit.mspresence.client.JustificationClient;
 //import tn.esprit.mspresence.dto.PresenceDTO;
 import tn.esprit.dto.JustificationDTO;
 import tn.esprit.dto.PresenceDTO;
+import tn.esprit.mspresence.client.JustificationClientRestTemplate;
 import tn.esprit.mspresence.entities.Presence;
 import tn.esprit.mspresence.mappers.PresenceMapper;
 import tn.esprit.mspresence.repositories.PresenceRepository;
@@ -21,6 +22,8 @@ public class IPresenceServiceImpl implements IPresenceService {
     private PresenceRepository presenceRepository;
     @Autowired
     private JustificationClient justificationClient;
+    @Autowired
+    private JustificationClientRestTemplate justificationClientRestTemplate;
     @Autowired
     private PresenceMapper presenceMapper;
 
@@ -58,5 +61,10 @@ public class IPresenceServiceImpl implements IPresenceService {
     }
     public JustificationDTO getJustificationForPresence(String justificationId) {
         return justificationClient.getJustificationById(justificationId);
+    }
+
+    @Override
+    public JustificationDTO getJustificationForPresenceRT(String justificationId) {
+        return justificationClientRestTemplate.getJustificationById(justificationId);
     }
 }

@@ -10,4 +10,5 @@ import tn.esprit.dto.JustificationDTO;
 public interface JustificationClient {
     @GetMapping("/api/justifications/getJustification/{justificationId}")
     JustificationDTO getJustificationById(@PathVariable("justificationId") String justificationId);
+
 }
