@@ -9,5 +9,4 @@ class MsDiscoveryServerApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

@@ -1,0 +1,57 @@
+version: '3'
+services:
+  service1:
+    image: msdiscoveryserver:latest
+    build:
+      context: ./Ms-DiscoveryServer
+    ports:
+      - "8761:8761"
+    networks:
+      - microservices-network
+
+  service2:
+    image: msconfigserver:latest
+    build:
+      context: ./Ms-ConfigServer
+    ports:
+      - "9093:9093"
+    networks:
+      - microservices-network
+
+  service3:
+    image: msgatewayserver:latest
+    build:
+      context: ./Ms-GatewayServer
+    ports:
+      - "9092:9092"
+    networks:
+      - microservices-network
+
+  service4:
+    image: mssharedlibrary:latest
+    build:
+      context: ./Ms-SharedLibrary
+    networks:
+      - microservices-network
+
+  service5:
+    image: mspresence:latest
+    build:
+      context: ./Ms-Presence
+    ports:
+      - "9090:9090"
+    networks:
+      - microservices-network
+
+  service6:
+    image: msjustification:latest
+    build:
+      context: ./Ms-Justification
+    ports:
+      - "9091:9091"
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    driver: bridge
